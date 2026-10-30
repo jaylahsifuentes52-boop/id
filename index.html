@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090811" />
+  <title>Oxlan AI — Your AI Workspace</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-icon"><span>✦</span></div>
+        <div><h1>Oxlan <span>AI</span></h1><p>Your AI workspace</p></div>
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">×</button>
+      </div>
+      <button class="new-chat" id="newChat"><span>＋</span> New conversation</button>
+      <div class="side-label">YOUR WORKSPACE</div>
+      <button class="nav-item active" id="homeNav"><span class="nav-symbol">⌂</span> Home <span class="nav-arrow">›</span></button>
+      <button class="nav-item" id="helpNav"><span class="nav-symbol help-symbol">?</span> Get help <span class="nav-arrow">↗</span></button>
+      <div class="side-label recent-label">RECENT CHATS <button id="clearChats" title="Clear recent chats">Clear</button></div>
+      <div id="chatList" class="chat-list"></div>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-tip"><div class="tip-icon">✧</div><div><strong>Big idea?</strong><p>Start a chat and bring it to life.</p></div></div>
+      <div class="side-bottom">
+        <div class="user-badge">O</div>
+        <div class="user-details"><strong>Oxlan Hub</strong><small>Personal workspace</small></div>
+        <button class="icon-button" id="settingsBtn" title="Settings">⚙</button>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="site-address"><span class="status-dot"></span><span>oxlan.org</span><span class="secure-tag">YOUR AI SPACE</span></div>
+        <div class="top-actions"><button class="help-top" id="topHelp">Get help <span>↗</span></button><button class="icon-button theme-button" id="themeBtn" title="Change color mood">◈</button></div>
+      </header>
+
+      <section class="workspace">
+        <div class="section-heading">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR CREATIVE SPACE</div><h2>AI Assistant</h2><p>One space for your questions, ideas, and projects.</p></div>
+          <span class="online-pill"><i></i> READY TO GO</span>
+        </div>
+
+        <div class="welcome" id="welcome">
+          <div class="hero-badge"><span class="hero-orbit orbit-one"></span><span class="hero-orbit orbit-two"></span><div class="sparkle-icon">✦</div><span class="hero-dot"></span></div>
+          <div class="hero-kicker">MEET YOUR NEW FAVORITE TOOL</div>
+          <h2>What's on your<br class="mobile-break"/> <span class="gradient-text">mind?</span></h2>
+          <p class="welcome-copy">Dream it. Ask it. Build it.<br class="small-break"/> Your next big idea starts right here.</p>
+          <div class="feature-grid">
+            <button class="feature-card card-purple" data-prompt="Help me build a colorful website from scratch.">
+              <div class="card-icon">⌘</div><div class="feature-title">Build something <span>↗</span></div><p>Create a website, app, or project from scratch.</p><div class="card-glow"></div>
+            </button>
+            <button class="feature-card card-blue" data-prompt="Teach me a topic in simple steps.">
+              <div class="card-icon">✧</div><div class="feature-title">Learn something <span>↗</span></div><p>Make tricky topics easier to understand.</p><div class="card-glow"></div>
+            </button>
+            <button class="feature-card card-orange" data-prompt="Help me debug my code. What information should I share?">
+              <div class="card-icon">{ }</div><div class="feature-title">Debug code <span>↗</span></div><p>Find errors and figure out what went wrong.</p><div class="card-glow"></div>
+            </button>
+            <button class="feature-card card-green" data-prompt="Help me plan a project and break it into simple steps.">
+              <div class="card-icon">↗</div><div class="feature-title">Plan a project <span>↗</span></div><p>Turn a big idea into a clear action plan.</p><div class="card-glow"></div>
+            </button>
+          </div>
+          <button class="help-banner" id="helpBanner"><span class="help-banner-icon">?</span><span><strong>Need a hand?</strong><small>Visit Get help for tips on using Oxlan AI.</small></span><span class="banner-arrow">→</span></button>
+        </div>
+
+        <div class="help-page" id="helpPage">
+          <div class="help-hero-icon">✦</div><div class="hero-kicker">OXLAN SUPPORT</div>
+          <h2>How can we <span class="gradient-text">help?</span></h2>
+          <p class="help-intro">Find a quick answer or send us a message about what you're trying to do.</p>
+          <div class="help-cards">
+            <button class="help-card" data-help="chat"><span class="help-card-icon purple-bg">✦</span><strong>Using the AI chat</strong><small>Learn how to ask questions and start a conversation.</small><span class="help-card-arrow">↗</span></button>
+            <button class="help-card" data-help="website"><span class="help-card-icon blue-bg">⌘</span><strong>Building a website</strong><small>Get guidance on planning and creating a site.</small><span class="help-card-arrow">↗</span></button>
+            <button class="help-card" data-help="trouble"><span class="help-card-icon orange-bg">⚒</span><strong>Something isn't working</strong><small>Tell us what happened and get troubleshooting tips.</small><span class="help-card-arrow">↗</span></button>
+          </div>
+          <form id="helpForm" class="help-form">
+            <div class="help-form-heading"><div><div class="hero-kicker">CONTACT / FEEDBACK</div><h3>Tell us what's up</h3></div><span class="form-spark">✧</span></div>
+            <label for="helpTopic">What do you need help with?</label>
+            <select id="helpTopic"><option>Using Oxlan AI</option><option>Website or coding project</option><option>Something is broken</option><option>Feature suggestion</option><option>Other</option></select>
+            <label for="helpMessage">Your message</label>
+            <textarea id="helpMessage" rows="4" placeholder="Describe what you're trying to do or what went wrong..." required></textarea>
+            <button type="submit" class="primary-button">Prepare help message <span>→</span></button>
+            <p class="form-note">This demo prepares a message in your browser. It does not send it to a support team.</p>
+            <div id="helpResult" class="help-result" hidden></div>
+          </form>
+        </div>
+
+        <div class="messages" id="messages" aria-live="polite"></div>
+        <div class="composer-wrap" id="composerWrap">
+          <form class="composer" id="chatForm">
+            <textarea id="messageInput" rows="1" placeholder="Ask Oxlan AI anything..." aria-label="Message Oxlan AI"></textarea>
+            <div class="composer-bottom"><span><span class="composer-dot"></span> Ready when you are <em>· Enter to send</em></span><button class="send-button" type="submit" aria-label="Send message">↑</button></div>
+          </form>
+          <p class="disclaimer">AI can make mistakes. Check important information and test generated code.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="settingsDialog"><form method="dialog" class="settings-content"><button class="dialog-close" aria-label="Close">×</button><div class="settings-mark">✦</div><h2>Workspace settings</h2><p>Personalize the name shown in your hub.</p><label for="displayName">Workspace name</label><input id="displayName" value="Oxlan AI" maxlength="32" /><button class="primary-button" id="saveSettings" value="save">Save settings</button></form></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
